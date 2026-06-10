@@ -1,0 +1,57 @@
+2026-05-28 12:02:31.975 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-28 12:02:32.099 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-28 12:03:22.567 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-28 12:03:22.688 +05:30 [INF] Creating key {39f3f9ac-bc63-4b25-a1e7-215027be160f} with creation date 2026-05-28 06:33:22Z, activation date 2026-05-28 06:33:22Z, and expiration date 2026-08-26 06:33:22Z.
+2026-05-28 12:03:22.699 +05:30 [ERR] An error occurred while reading the key ring.
+System.UnauthorizedAccessException: Access to the path 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys\2f2f8669-7687-43e3-aba6-0bf9d65cd81b.tmp' is denied.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenWrite(String path)
+   at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElementCore(XElement element, String filename)
+   at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElement(XElement element, String friendlyName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.CreateNewKey(Guid keyId, DateTimeOffset creationDate, DateTimeOffset activationDate, DateTimeOffset expirationDate)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.CreateNewKey(DateTimeOffset activationDate, DateTimeOffset expirationDate)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.CreateCacheableKeyRingCore(DateTimeOffset now, IKey keyJustAdded)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+2026-05-28 12:03:22.704 +05:30 [INF] Key ring failed to load during application startup.
+System.UnauthorizedAccessException: Access to the path 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys\2f2f8669-7687-43e3-aba6-0bf9d65cd81b.tmp' is denied.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenWrite(String path)
+   at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElementCore(XElement element, String filename)
+   at Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository.StoreElement(XElement element, String friendlyName)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.CreateNewKey(Guid keyId, DateTimeOffset creationDate, DateTimeOffset activationDate, DateTimeOffset expirationDate)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.CreateNewKey(DateTimeOffset activationDate, DateTimeOffset expirationDate)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.CreateCacheableKeyRingCore(DateTimeOffset now, IKey keyJustAdded)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+   at Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService.StartAsync(CancellationToken token)
+2026-05-28 12:03:22.766 +05:30 [INF] Now listening on: http://localhost:5250
+2026-05-28 12:03:22.768 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-28 12:03:22.768 +05:30 [INF] Hosting environment: Development
+2026-05-28 12:03:22.768 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-05-28 14:21:50.701 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-28 14:21:50.817 +05:30 [INF] Creating key {f2787fa5-862f-4a4f-9ee3-b3e81d8b3ef6} with creation date 2026-05-28 08:51:50Z, activation date 2026-05-28 08:51:50Z, and expiration date 2026-08-26 08:51:50Z.
+2026-05-28 14:21:50.830 +05:30 [INF] Writing data to file 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys\key-f2787fa5-862f-4a4f-9ee3-b3e81d8b3ef6.xml'.
+2026-05-28 14:21:51.047 +05:30 [INF] Now listening on: https://localhost:7265
+2026-05-28 14:21:51.048 +05:30 [INF] Now listening on: http://localhost:5250
+2026-05-28 14:21:51.051 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-28 14:21:51.053 +05:30 [INF] Hosting environment: Development
+2026-05-28 14:21:51.054 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-05-28 14:22:05.975 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/favicon.ico - null null
+2026-05-28 14:22:06.076 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/favicon.ico - 404 0 null 102.7886ms
+2026-05-28 14:22:06.086 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7265/favicon.ico, Response status code: 404
+2026-05-28 14:22:13.631 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/favicon.ico - null null
+2026-05-28 14:22:13.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/favicon.ico - 404 0 null 6.8834ms
+2026-05-28 14:22:13.643 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7265/favicon.ico, Response status code: 404
+2026-05-28 14:23:18.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-05-28 14:23:18.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 113.2103ms
+2026-05-28 14:23:19.060 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-05-28 14:23:19.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 209.7829ms
+2026-05-28 14:23:40.924 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-05-28 14:23:40.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 5.3587ms
+2026-05-28 14:23:41.107 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-05-28 14:23:41.117 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.9179ms

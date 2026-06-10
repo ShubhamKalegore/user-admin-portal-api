@@ -1,0 +1,985 @@
+2026-06-04 10:28:35.102 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 10:28:35.757 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 10:28:35.761 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 10:28:35.836 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 10:28:35.858 +05:30 [INF] Hosting environment: Development
+2026-06-04 10:28:35.860 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 10:28:36.560 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 10:28:36.804 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 249.5661ms
+2026-06-04 10:28:36.816 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 10:28:36.817 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 10:28:36.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 16.3647ms
+2026-06-04 10:28:36.883 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.0084ms
+2026-06-04 10:28:36.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 10:28:36.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.8009ms
+2026-06-04 10:28:36.985 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/favicon-32x32.png - null null
+2026-06-04 10:28:37.006 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-06-04 10:28:37.008 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/favicon-32x32.png - 200 628 image/png 23.6292ms
+2026-06-04 10:28:50.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Students/filter-sort - null null
+2026-06-04 10:28:50.674 +05:30 [INF] HTTP GET /api/Students/filter-sort request started
+2026-06-04 10:28:50.767 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API)'
+2026-06-04 10:28:50.786 +05:30 [INF] Route matched with {action = "GetStudentsByAge", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsByAge() on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 10:28:51.441 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 10:28:52.101 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[CourseId], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Age] > 18
+ORDER BY [s].[Name]
+2026-06-04 10:28:52.127 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Domain.Entities.Student, CleanArchDemo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 10:28:52.137 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API) in 1344.9331ms
+2026-06-04 10:28:52.140 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API)'
+2026-06-04 10:28:52.141 +05:30 [INF] HTTP GET /api/Students/filter-sort responded 200 in 1468 ms
+2026-06-04 10:28:52.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Students/filter-sort - 200 null application/json; charset=utf-8 1486.0475ms
+2026-06-04 10:48:56.388 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 10:48:56.399 +05:30 [INF] CORS policy execution successful.
+2026-06-04 10:48:56.402 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 14.6045ms
+2026-06-04 10:48:56.405 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 10:48:56.411 +05:30 [INF] CORS policy execution successful.
+2026-06-04 10:48:56.412 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 10:48:56.416 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 10:48:56.428 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 10:48:56.466 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 10:48:56.569 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 10:48:56.727 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:48:56.802 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 10:48:56.815 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T10:53:56.7315564+05:30".
+2026-06-04 10:48:56.818 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:48:56.819 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:48:56.821 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 10:48:56.823 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 390.8674ms
+2026-06-04 10:48:56.825 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 10:48:56.826 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 414 ms
+2026-06-04 10:48:56.828 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 422.9987ms
+2026-06-04 10:59:20.858 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 10:59:20.866 +05:30 [INF] CORS policy execution successful.
+2026-06-04 10:59:20.867 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 12.1314ms
+2026-06-04 10:59:20.870 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 10:59:20.874 +05:30 [INF] CORS policy execution successful.
+2026-06-04 10:59:20.874 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 10:59:20.877 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 10:59:20.878 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 10:59:20.882 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 10:59:20.911 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 10:59:20.989 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:59:20.996 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 10:59:21.000 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:04:20.9915796+05:30".
+2026-06-04 10:59:21.002 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:59:21.003 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 10:59:21.005 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 10:59:21.007 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 126.6742ms
+2026-06-04 10:59:21.009 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 10:59:21.010 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 135 ms
+2026-06-04 10:59:21.012 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 143.0821ms
+2026-06-04 11:14:45.223 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:14:45.228 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:14:45.229 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 8.124ms
+2026-06-04 11:14:45.231 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:14:45.236 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:14:45.237 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:14:45.238 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:14:45.239 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:14:45.243 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:14:45.262 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:14:45.349 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:14:45.355 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:14:45.365 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:19:45.3510328+05:30".
+2026-06-04 11:14:45.367 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:14:45.368 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:14:45.369 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:14:45.371 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 129.7672ms
+2026-06-04 11:14:45.372 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:14:45.373 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 136 ms
+2026-06-04 11:14:45.375 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 144.0531ms
+2026-06-04 11:15:01.667 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:15:01.671 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:01.672 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.9949ms
+2026-06-04 11:15:01.673 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:15:01.679 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:01.680 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:15:01.681 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:01.682 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:15:01.685 +05:30 [INF] Login requested for email u@call.com.
+2026-06-04 11:15:01.688 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:15:01.765 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:15:01.769 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:15:01.771 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-04T11:20:01.7675268+05:30".
+2026-06-04 11:15:01.772 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:15:01.773 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:15:01.775 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:15:01.776 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 91.5117ms
+2026-06-04 11:15:01.778 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:01.780 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 99 ms
+2026-06-04 11:15:01.782 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 108.6959ms
+2026-06-04 11:15:26.139 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:15:26.149 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:26.150 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.8758ms
+2026-06-04 11:15:26.156 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:15:26.161 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:26.162 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:15:26.163 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:26.164 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:15:26.166 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:15:26.174 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:15:26.248 +05:30 [INF] Login failed due to invalid credentials for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:15:26.250 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-04 11:15:26.252 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 85.598ms
+2026-06-04 11:15:26.253 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:26.254 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 92 ms
+2026-06-04 11:15:26.257 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 103.0368ms
+2026-06-04 11:15:32.092 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:15:32.096 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:32.097 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.1509ms
+2026-06-04 11:15:32.099 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:15:32.104 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:15:32.106 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:15:32.108 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:32.110 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:15:32.113 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:15:32.116 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:15:32.191 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:15:32.196 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:15:32.199 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:20:32.1934420+05:30".
+2026-06-04 11:15:32.201 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:15:32.202 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:15:32.203 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:15:32.206 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 93.3514ms
+2026-06-04 11:15:32.208 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:15:32.209 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 103 ms
+2026-06-04 11:15:32.211 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 112.7363ms
+2026-06-04 11:17:37.594 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:17:37.603 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:17:37.604 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.9538ms
+2026-06-04 11:17:37.629 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:17:37.636 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:17:37.637 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:17:37.638 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:17:37.640 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:17:37.643 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:17:37.651 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:17:37.725 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:17:37.732 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:17:37.736 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:22:37.7278798+05:30".
+2026-06-04 11:17:37.737 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:17:37.739 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:17:37.740 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:17:37.742 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 99.2738ms
+2026-06-04 11:17:37.744 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:17:37.745 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 108 ms
+2026-06-04 11:17:37.748 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 139.3597ms
+2026-06-04 11:18:11.769 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-04 11:18:11.777 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:18:11.778 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 9.9277ms
+2026-06-04 11:18:11.791 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-04 11:18:11.794 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:18:11.795 +05:30 [INF] HTTP GET /api/users request started
+2026-06-04 11:18:11.849 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-04 11:18:11.854 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-04 11:18:11.861 +05:30 [INF] Handling GetUsersQuery.
+2026-06-04 11:18:11.873 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-04 11:18:11.877 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 11:18:11.882 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 25.3381ms
+2026-06-04 11:18:11.885 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-04 11:18:11.886 +05:30 [INF] HTTP GET /api/users responded 200 in 91 ms
+2026-06-04 11:18:11.889 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 98.0479ms
+2026-06-04 11:19:16.697 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:19:16.705 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:19:16.706 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.4613ms
+2026-06-04 11:19:16.711 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:19:16.718 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:19:16.719 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:19:16.720 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:19:16.721 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:19:16.724 +05:30 [INF] Login requested for email u@call.com.
+2026-06-04 11:19:16.729 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:19:16.805 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:19:16.811 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:19:16.816 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-04T11:24:16.8073152+05:30".
+2026-06-04 11:19:16.818 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:19:16.820 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:19:16.822 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:19:16.824 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 100.6722ms
+2026-06-04 11:19:16.826 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:19:16.828 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 109 ms
+2026-06-04 11:19:16.830 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 119.4963ms
+2026-06-04 11:26:17.490 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:26:17.498 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:26:17.499 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.1454ms
+2026-06-04 11:26:17.501 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:26:17.524 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:26:17.525 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:26:17.526 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:26:17.527 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:26:17.529 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:26:17.543 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:26:17.623 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:26:17.628 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:26:17.632 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:31:17.6254316+05:30".
+2026-06-04 11:26:17.634 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:26:17.635 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:26:17.636 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:26:17.638 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 109.0151ms
+2026-06-04 11:26:17.640 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:26:17.642 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 116 ms
+2026-06-04 11:26:17.644 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 142.7978ms
+2026-06-04 11:31:02.916 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:31:03.074 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:31:21.810 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:32:08.328 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:32:22.145 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:32:34.071 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:54:41.366 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 11:54:41.742 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 11:54:41.744 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 11:54:41.793 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 11:54:41.795 +05:30 [INF] Hosting environment: Development
+2026-06-04 11:54:41.796 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 11:54:41.948 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:54:41.999 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:54:42.006 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 61.8738ms
+2026-06-04 11:54:42.055 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:54:42.062 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:54:42.062 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 11:54:42.067 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:54:42.130 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:54:42.172 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:54:42.277 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 215.0193ms
+2026-06-04 11:54:42.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 11:54:42.300 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 11:54:42.303 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 11.2215ms
+2026-06-04 11:54:42.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.0076ms
+2026-06-04 11:54:42.393 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:54:42.447 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 11:54:42.469 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.2703ms
+2026-06-04 11:54:42.989 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 11:54:43.634 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:54:43.810 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:54:43.886 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:54:43.899 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T11:59:43.8132001+05:30".
+2026-06-04 11:54:43.902 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:54:43.904 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:54:43.910 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:54:43.924 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 1745.1467ms
+2026-06-04 11:54:43.929 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:54:43.936 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1870 ms
+2026-06-04 11:54:43.966 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 1911.449ms
+2026-06-04 11:55:10.774 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:55:10.779 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:55:10.780 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.5517ms
+2026-06-04 11:55:10.782 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:55:10.789 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:55:10.790 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:55:10.792 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:55:10.794 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:55:10.797 +05:30 [INF] Login requested for email u@call.com.
+2026-06-04 11:55:10.855 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:55:10.932 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:55:10.947 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:55:10.951 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-04T12:00:10.9343519+05:30".
+2026-06-04 11:55:10.953 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:55:10.954 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-04 11:55:10.956 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:55:10.958 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 162.1433ms
+2026-06-04 11:55:10.960 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:55:10.961 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 171 ms
+2026-06-04 11:55:10.963 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 181.5824ms
+2026-06-04 11:56:11.583 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 11:56:11.592 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:56:11.593 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.6388ms
+2026-06-04 11:56:11.595 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 11:56:11.599 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:56:11.600 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 11:56:11.603 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:56:11.604 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 11:56:11.610 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 11:56:11.633 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 11:56:11.710 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:56:11.716 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 11:56:11.719 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T12:01:11.7125518+05:30".
+2026-06-04 11:56:11.721 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:56:11.722 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 11:56:11.723 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 11:56:11.725 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 117.6086ms
+2026-06-04 11:56:11.727 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 11:56:11.728 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 127 ms
+2026-06-04 11:56:11.730 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 134.9346ms
+2026-06-04 11:57:10.879 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-04 11:57:10.888 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:57:10.889 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 9.6561ms
+2026-06-04 11:57:10.891 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-04 11:57:10.895 +05:30 [INF] CORS policy execution successful.
+2026-06-04 11:57:10.896 +05:30 [INF] HTTP GET /api/users request started
+2026-06-04 11:57:10.940 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-04 11:57:10.945 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-04 11:57:10.952 +05:30 [INF] Handling GetUsersQuery.
+2026-06-04 11:57:10.968 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-04 11:57:10.972 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 11:57:10.978 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 30.6038ms
+2026-06-04 11:57:10.981 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-04 11:57:10.982 +05:30 [INF] HTTP GET /api/users responded 200 in 85 ms
+2026-06-04 11:57:10.984 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 93.4044ms
+2026-06-04 12:18:49.062 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 12:18:49.069 +05:30 [INF] CORS policy execution successful.
+2026-06-04 12:18:49.070 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 8.6548ms
+2026-06-04 12:18:49.078 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 12:18:49.086 +05:30 [INF] CORS policy execution successful.
+2026-06-04 12:18:49.087 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 12:18:49.088 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 12:18:49.089 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 12:18:49.091 +05:30 [INF] Login requested for email s@call.com.
+2026-06-04 12:18:49.120 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 12:18:49.123 +05:30 [INF] Login failed because user was not found for email s@call.com.
+2026-06-04 12:18:49.125 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-04 12:18:49.127 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 36.0502ms
+2026-06-04 12:18:49.129 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 12:18:49.130 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 43 ms
+2026-06-04 12:18:49.132 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 54.0229ms
+2026-06-04 12:18:54.699 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 12:18:54.701 +05:30 [INF] CORS policy execution successful.
+2026-06-04 12:18:54.703 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.1267ms
+2026-06-04 12:18:54.704 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 12:18:54.708 +05:30 [INF] CORS policy execution successful.
+2026-06-04 12:18:54.709 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 12:18:54.711 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 12:18:54.713 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 12:18:54.715 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 12:18:54.719 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 12:18:54.794 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 12:18:54.811 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 12:18:54.816 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T12:23:54.7966028+05:30".
+2026-06-04 12:18:54.819 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 12:18:54.820 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 12:18:54.821 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 12:18:54.822 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 107.8567ms
+2026-06-04 12:18:54.824 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 12:18:54.825 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 116 ms
+2026-06-04 12:18:54.827 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 122.9389ms
+2026-06-04 14:46:18.377 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Products - null null
+2026-06-04 14:46:18.387 +05:30 [INF] HTTP GET /api/Products request started
+2026-06-04 14:46:18.389 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.ProductsController.GetAll (CleanArchDemo.API)'
+2026-06-04 14:46:18.394 +05:30 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.ProductsController (CleanArchDemo.API).
+2026-06-04 14:46:18.497 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2026-06-04 14:46:18.512 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Domain.Entities.Product, CleanArchDemo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 14:46:18.522 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.ProductsController.GetAll (CleanArchDemo.API) in 125.5764ms
+2026-06-04 14:46:18.525 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.ProductsController.GetAll (CleanArchDemo.API)'
+2026-06-04 14:46:18.526 +05:30 [INF] HTTP GET /api/Products responded 200 in 138 ms
+2026-06-04 14:46:18.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Products - 200 null application/json; charset=utf-8 151.0941ms
+2026-06-04 14:46:27.458 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Products/dto - null null
+2026-06-04 14:46:27.464 +05:30 [INF] HTTP GET /api/Products/dto request started
+2026-06-04 14:46:27.467 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.ProductsController.GetAllAsDto (CleanArchDemo.API)'
+2026-06-04 14:46:27.483 +05:30 [INF] Route matched with {action = "GetAllAsDto", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsDto() on controller CleanArchDemo.API.Controllers.ProductsController (CleanArchDemo.API).
+2026-06-04 14:46:27.487 +05:30 [INF] Fetching and mapping to DTOs...
+2026-06-04 14:46:27.491 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2026-06-04 14:46:27.506 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.ProductDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 14:46:27.510 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.ProductsController.GetAllAsDto (CleanArchDemo.API) in 24.0455ms
+2026-06-04 14:46:27.512 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.ProductsController.GetAllAsDto (CleanArchDemo.API)'
+2026-06-04 14:46:27.513 +05:30 [INF] HTTP GET /api/Products/dto responded 200 in 49 ms
+2026-06-04 14:46:27.516 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Products/dto - 200 null application/json; charset=utf-8 58.2017ms
+2026-06-04 14:54:28.701 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 14:54:28.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 26.8277ms
+2026-06-04 14:54:28.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 14:54:28.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 14:54:28.757 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 8.9127ms
+2026-06-04 14:54:28.781 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7274ms
+2026-06-04 14:54:28.937 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 14:54:28.955 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.1842ms
+2026-06-04 14:54:38.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Students/filter-sort - null null
+2026-06-04 14:54:38.955 +05:30 [INF] HTTP GET /api/Students/filter-sort request started
+2026-06-04 14:54:38.957 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API)'
+2026-06-04 14:54:38.960 +05:30 [INF] Route matched with {action = "GetStudentsByAge", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsByAge() on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:54:38.998 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[CourseId], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+WHERE [s].[Age] > 18
+ORDER BY [s].[Name]
+2026-06-04 14:54:39.003 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Domain.Entities.Student, CleanArchDemo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 14:54:39.006 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API) in 42.5308ms
+2026-06-04 14:54:39.008 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByAge (CleanArchDemo.API)'
+2026-06-04 14:54:39.009 +05:30 [INF] HTTP GET /api/Students/filter-sort responded 200 in 54 ms
+2026-06-04 14:54:39.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Students/filter-sort - 200 null application/json; charset=utf-8 62.5558ms
+2026-06-04 14:56:25.886 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Students - null null
+2026-06-04 14:56:25.895 +05:30 [INF] HTTP GET /api/Students request started
+2026-06-04 14:56:25.896 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetAllStudents (CleanArchDemo.API)'
+2026-06-04 14:56:25.899 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents() on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:56:25.914 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[CourseId], [s].[Email], [s].[Name]
+FROM [Students] AS [s]
+2026-06-04 14:56:25.920 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.StudentDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 14:56:25.923 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.GetAllStudents (CleanArchDemo.API) in 20.3533ms
+2026-06-04 14:56:25.931 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetAllStudents (CleanArchDemo.API)'
+2026-06-04 14:56:25.932 +05:30 [INF] HTTP GET /api/Students responded 200 in 37 ms
+2026-06-04 14:56:25.934 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Students - 200 null application/json; charset=utf-8 47.9958ms
+2026-06-04 14:57:00.788 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students - application/json 82
+2026-06-04 14:57:00.797 +05:30 [INF] CORS policy execution failed.
+2026-06-04 14:57:00.799 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 14:57:00.800 +05:30 [INF] HTTP POST /api/Students request started
+2026-06-04 14:57:00.803 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:57:00.807 +05:30 [INF] Route matched with {action = "CreateStudent", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateStudent(CleanArchDemo.Application.DTOs.StudentDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:57:00.932 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API) in 121.2434ms
+2026-06-04 14:57:00.935 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:57:00.963 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Type Map configuration:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Destination Member:
+Course
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> Course
+System.String -> CleanArchDemo.Domain.Entities.Course
+
+Destination Member:
+Course
+
+   at lambda_method167(Closure, String, Course, ResolutionContext)
+   at lambda_method166(Closure, Object, Student, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method166(Closure, Object, Student, ResolutionContext)
+   at CleanArchDemo.API.Controllers.StudentsController.CreateStudent(StudentDto dto) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Controllers\StudentsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanArchDemo.API.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Middleware\RequestLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-04 14:57:01.016 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students - 500 null text/plain; charset=utf-8 227.7818ms
+2026-06-04 14:57:28.782 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students - application/json 82
+2026-06-04 14:57:28.789 +05:30 [INF] CORS policy execution failed.
+2026-06-04 14:57:28.790 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 14:57:28.792 +05:30 [INF] HTTP POST /api/Students request started
+2026-06-04 14:57:28.794 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:57:28.795 +05:30 [INF] Route matched with {action = "CreateStudent", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateStudent(CleanArchDemo.Application.DTOs.StudentDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:57:30.759 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API) in 1960.9001ms
+2026-06-04 14:57:30.764 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:57:30.818 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Type Map configuration:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Destination Member:
+Course
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> Course
+System.String -> CleanArchDemo.Domain.Entities.Course
+
+Destination Member:
+Course
+
+   at lambda_method167(Closure, String, Course, ResolutionContext)
+   at lambda_method166(Closure, Object, Student, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method166(Closure, Object, Student, ResolutionContext)
+   at CleanArchDemo.API.Controllers.StudentsController.CreateStudent(StudentDto dto) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Controllers\StudentsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanArchDemo.API.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Middleware\RequestLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-04 14:57:30.836 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students - 500 null text/plain; charset=utf-8 2055.1283ms
+2026-06-04 14:57:49.942 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students - application/json 82
+2026-06-04 14:57:49.947 +05:30 [INF] CORS policy execution failed.
+2026-06-04 14:57:49.948 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 14:57:49.949 +05:30 [INF] HTTP POST /api/Students request started
+2026-06-04 14:57:49.951 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:57:49.953 +05:30 [INF] Route matched with {action = "CreateStudent", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateStudent(CleanArchDemo.Application.DTOs.StudentDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:58:21.749 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 14:58:22.068 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 14:58:22.069 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 14:58:22.113 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 14:58:22.115 +05:30 [INF] Hosting environment: Development
+2026-06-04 14:58:22.116 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 14:58:22.467 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 14:58:22.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 180.8742ms
+2026-06-04 14:58:22.649 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 14:58:22.649 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 14:58:22.659 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 9.8261ms
+2026-06-04 14:58:22.708 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.4025ms
+2026-06-04 14:58:22.932 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 14:58:22.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.5889ms
+2026-06-04 14:58:52.718 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students - application/json 74
+2026-06-04 14:58:52.734 +05:30 [INF] CORS policy execution failed.
+2026-06-04 14:58:52.736 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 14:58:52.739 +05:30 [INF] HTTP POST /api/Students request started
+2026-06-04 14:58:52.809 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:58:52.830 +05:30 [INF] Route matched with {action = "CreateStudent", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateStudent(CleanArchDemo.Application.DTOs.StudentDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 14:58:58.349 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API) in 5513.6822ms
+2026-06-04 14:58:58.353 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 14:58:58.377 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Type Map configuration:
+StudentDto -> Student
+CleanArchDemo.Application.DTOs.StudentDto -> CleanArchDemo.Domain.Entities.Student
+
+Destination Member:
+Course
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> Course
+System.String -> CleanArchDemo.Domain.Entities.Course
+
+Destination Member:
+Course
+
+   at lambda_method13(Closure, String, Course, ResolutionContext)
+   at lambda_method12(Closure, Object, Student, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method12(Closure, Object, Student, ResolutionContext)
+   at CleanArchDemo.API.Controllers.StudentsController.CreateStudent(StudentDto dto) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Controllers\StudentsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanArchDemo.API.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Middleware\RequestLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-04 14:58:58.417 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students - 500 null text/plain; charset=utf-8 5699.3965ms
+2026-06-04 15:01:06.822 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 15:01:07.187 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 15:01:07.189 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 15:01:07.235 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 15:01:07.237 +05:30 [INF] Hosting environment: Development
+2026-06-04 15:01:07.238 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 15:01:07.562 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 15:01:07.740 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 179.8008ms
+2026-06-04 15:01:07.757 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 15:01:07.757 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 15:01:07.766 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 8.4266ms
+2026-06-04 15:01:07.805 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.8327ms
+2026-06-04 15:01:07.862 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 15:01:07.877 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.9636ms
+2026-06-04 15:03:43.644 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 15:03:43.935 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 15:03:43.938 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 15:03:43.982 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 15:03:43.985 +05:30 [INF] Hosting environment: Development
+2026-06-04 15:03:43.986 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 15:03:44.539 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 15:03:44.722 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 191.256ms
+2026-06-04 15:03:44.738 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 15:03:44.738 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 15:03:44.760 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 21.6081ms
+2026-06-04 15:03:44.790 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.9581ms
+2026-06-04 15:03:44.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 15:03:44.861 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0645ms
+2026-06-04 15:04:08.596 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students/course - application/json 29
+2026-06-04 15:04:08.606 +05:30 [INF] CORS policy execution failed.
+2026-06-04 15:04:08.608 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 15:04:08.611 +05:30 [INF] HTTP POST /api/Students/course request started
+2026-06-04 15:04:08.715 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API)'
+2026-06-04 15:04:08.736 +05:30 [INF] Route matched with {action = "CreateCourse", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCourse(CleanArchDemo.Application.DTOs.CourseDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 15:04:09.454 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 15:04:10.056 +05:30 [ERR] Failed executing DbCommand (64ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Id], [Name])
+VALUES (@p0, @p1);
+2026-06-04 15:04:10.085 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'CleanArchDemo.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Courses' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3db804a7-9b60-47a8-95cc-6bf85ed24f25
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Courses' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3db804a7-9b60-47a8-95cc-6bf85ed24f25
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-04 15:04:10.272 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API) in 1530.7823ms
+2026-06-04 15:04:10.275 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API)'
+2026-06-04 15:04:10.375 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Courses' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3db804a7-9b60-47a8-95cc-6bf85ed24f25
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CleanArchDemo.Infrastructure.Repositories.StudentRepository.SaveCourse(Course course) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.Infrastructure\Repositories\StudentRepository.cs:line 87
+   at CleanArchDemo.Application.Services.StudentService.SaveCourse(Course course) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.Application\Services\StudentService.cs:line 64
+   at CleanArchDemo.API.Controllers.StudentsController.CreateCourse(CourseDto dto) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Controllers\StudentsController.cs:line 63
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CleanArchDemo.API.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API\Middleware\RequestLoggingMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-04 15:04:10.441 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students/course - 500 null text/plain; charset=utf-8 1845.5112ms
+2026-06-04 15:06:38.637 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 15:06:38.889 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 15:06:38.894 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 15:06:38.956 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 15:06:38.958 +05:30 [INF] Hosting environment: Development
+2026-06-04 15:06:38.960 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 15:06:39.202 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 15:06:39.380 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 182.4789ms
+2026-06-04 15:06:39.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 15:06:39.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 15:06:39.400 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 7.5672ms
+2026-06-04 15:06:39.445 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.4348ms
+2026-06-04 15:06:39.512 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 15:06:39.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.9368ms
+2026-06-04 15:06:56.080 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students/course - application/json 29
+2026-06-04 15:06:56.090 +05:30 [INF] CORS policy execution failed.
+2026-06-04 15:06:56.092 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 15:06:56.097 +05:30 [INF] HTTP POST /api/Students/course request started
+2026-06-04 15:06:56.177 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API)'
+2026-06-04 15:06:56.200 +05:30 [INF] Route matched with {action = "CreateCourse", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCourse(CleanArchDemo.Application.DTOs.CourseDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 15:06:56.990 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 15:06:57.616 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2026-06-04 15:06:57.665 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.CourseDto'.
+2026-06-04 15:06:57.672 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API) in 1466.4292ms
+2026-06-04 15:06:57.675 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateCourse (CleanArchDemo.API)'
+2026-06-04 15:06:57.677 +05:30 [INF] HTTP POST /api/Students/course responded 200 in 1581 ms
+2026-06-04 15:06:57.685 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students/course - 200 null application/json; charset=utf-8 1605.0701ms
+2026-06-04 15:07:14.340 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Students/course/1 - null null
+2026-06-04 15:07:14.351 +05:30 [INF] HTTP GET /api/Students/course/1 request started
+2026-06-04 15:07:14.355 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByCourseId (CleanArchDemo.API)'
+2026-06-04 15:07:14.363 +05:30 [INF] Route matched with {action = "GetStudentsByCourseId", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentsByCourseId(Int32) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 15:07:14.672 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__courseId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[CourseId], [s].[Email], [s].[Name], [c].[Id], [c].[Name]
+FROM [Students] AS [s]
+INNER JOIN [Courses] AS [c] ON [s].[CourseId] = [c].[Id]
+WHERE [s].[CourseId] = @__courseId_0
+2026-06-04 15:07:14.680 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Domain.Entities.Student, CleanArchDemo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 15:07:14.684 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.GetStudentsByCourseId (CleanArchDemo.API) in 318.0974ms
+2026-06-04 15:07:14.687 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetStudentsByCourseId (CleanArchDemo.API)'
+2026-06-04 15:07:14.688 +05:30 [INF] HTTP GET /api/Students/course/1 responded 200 in 336 ms
+2026-06-04 15:07:14.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Students/course/1 - 200 null application/json; charset=utf-8 350.5653ms
+2026-06-04 15:14:09.696 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-04 15:14:09.938 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-04 15:14:09.940 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-04 15:14:09.984 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-04 15:14:09.987 +05:30 [INF] Hosting environment: Development
+2026-06-04 15:14:09.988 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-04 15:14:10.576 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-04 15:14:10.753 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 180.7304ms
+2026-06-04 15:14:10.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-04 15:14:10.775 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-04 15:14:10.790 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 15.3005ms
+2026-06-04 15:14:10.851 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.8616ms
+2026-06-04 15:14:10.903 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-04 15:14:10.925 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.8531ms
+2026-06-04 15:14:20.228 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Students/course - null null
+2026-06-04 15:14:20.240 +05:30 [INF] HTTP GET /api/Students/course request started
+2026-06-04 15:14:20.319 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetAllCourses (CleanArchDemo.API)'
+2026-06-04 15:14:20.338 +05:30 [INF] Route matched with {action = "GetAllCourses", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCourses() on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 15:14:21.010 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-04 15:14:21.557 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Courses] AS [c]
+2026-06-04 15:14:21.630 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.CourseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-04 15:14:21.641 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.GetAllCourses (CleanArchDemo.API) in 1294.9894ms
+2026-06-04 15:14:21.643 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.GetAllCourses (CleanArchDemo.API)'
+2026-06-04 15:14:21.645 +05:30 [INF] HTTP GET /api/Students/course responded 200 in 1407 ms
+2026-06-04 15:14:21.653 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Students/course - 200 null application/json; charset=utf-8 1424.731ms
+2026-06-04 15:14:55.714 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Students - application/json 86
+2026-06-04 15:14:55.728 +05:30 [INF] CORS policy execution failed.
+2026-06-04 15:14:55.730 +05:30 [INF] Request origin https://localhost:7265 does not have permission to access the resource.
+2026-06-04 15:14:55.734 +05:30 [INF] HTTP POST /api/Students request started
+2026-06-04 15:14:55.736 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 15:14:55.745 +05:30 [INF] Route matched with {action = "CreateStudent", controller = "Students"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateStudent(CleanArchDemo.Application.DTOs.StudentDto) on controller CleanArchDemo.API.Controllers.StudentsController (CleanArchDemo.API).
+2026-06-04 15:14:55.938 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Age], [CourseId], [Email], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-06-04 15:14:55.963 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.StudentDto'.
+2026-06-04 15:14:55.967 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API) in 214.6103ms
+2026-06-04 15:14:55.970 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.StudentsController.CreateStudent (CleanArchDemo.API)'
+2026-06-04 15:14:55.971 +05:30 [INF] HTTP POST /api/Students responded 200 in 237 ms
+2026-06-04 15:14:55.973 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Students - 200 null application/json; charset=utf-8 259.1372ms
+2026-06-04 18:14:22.055 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 18:14:22.075 +05:30 [INF] CORS policy execution successful.
+2026-06-04 18:14:22.084 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 31.6062ms
+2026-06-04 18:14:22.094 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 18:14:22.120 +05:30 [INF] CORS policy execution successful.
+2026-06-04 18:14:22.124 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 18:14:22.139 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 18:14:22.184 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 18:14:22.233 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 18:14:22.766 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 18:14:23.221 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:14:23.270 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 18:14:23.284 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T18:19:23.2297964+05:30".
+2026-06-04 18:14:23.290 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:14:23.294 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:14:23.300 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 18:14:23.307 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 1113.1506ms
+2026-06-04 18:14:23.312 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 18:14:23.316 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1192 ms
+2026-06-04 18:14:23.322 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 1229.7163ms
+2026-06-04 18:16:56.818 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-04 18:16:56.834 +05:30 [INF] CORS policy execution successful.
+2026-06-04 18:16:56.836 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 19.1346ms
+2026-06-04 18:16:56.841 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-04 18:16:56.854 +05:30 [INF] CORS policy execution successful.
+2026-06-04 18:16:56.857 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-04 18:16:56.862 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 18:16:56.865 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-04 18:16:56.872 +05:30 [INF] Login requested for email a@call.com.
+2026-06-04 18:16:56.891 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-04 18:16:57.116 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:16:57.173 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-04 18:16:57.186 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-04T18:21:57.1214282+05:30".
+2026-06-04 18:16:57.192 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:16:57.198 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-04 18:16:57.205 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-04 18:16:57.210 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 340.7621ms
+2026-06-04 18:16:57.218 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-04 18:16:57.223 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 365 ms
+2026-06-04 18:16:57.230 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 389.6808ms

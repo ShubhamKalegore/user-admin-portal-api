@@ -1,0 +1,28 @@
+2026-06-10 10:40:44.275 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-10 10:40:44.862 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-10 10:40:44.866 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-10 10:40:44.946 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-10 10:40:44.949 +05:30 [INF] Hosting environment: Development
+2026-06-10 10:40:44.950 +05:30 [INF] Content root path: C:\Users\hp\Desktop\Github Projects\react-admin-portal\.net\user-admin-portal-api\CleanArchitecture\CleanArchDemo.API
+2026-06-10 10:40:45.803 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-10 10:40:46.049 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 256.9574ms
+2026-06-10 10:40:46.052 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-10 10:40:46.053 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-10 10:40:46.071 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 18.8199ms
+2026-06-10 10:40:46.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.4409ms
+2026-06-10 10:40:46.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-10 10:40:46.220 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.6057ms
+2026-06-10 10:44:57.087 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-10 10:44:57.382 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-10 10:44:57.385 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-10 10:44:57.432 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-10 10:44:57.435 +05:30 [INF] Hosting environment: Development
+2026-06-10 10:44:57.436 +05:30 [INF] Content root path: C:\Users\hp\Desktop\Github Projects\react-admin-portal\.net\user-admin-portal-api\CleanArchDemo.API
+2026-06-10 10:44:58.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-10 10:44:58.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 303.2906ms
+2026-06-10 10:44:58.607 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-10 10:44:58.607 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-10 10:44:58.634 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 24.4591ms
+2026-06-10 10:44:58.798 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 190.8435ms
+2026-06-10 10:44:58.862 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-10 10:44:58.892 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.2307ms

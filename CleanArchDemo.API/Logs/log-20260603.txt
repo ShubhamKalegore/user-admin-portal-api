@@ -1,0 +1,1366 @@
+2026-06-03 12:03:11.155 +05:30 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-03 12:03:11.601 +05:30 [INF] Now listening on: https://localhost:7265
+2026-06-03 12:03:11.603 +05:30 [INF] Now listening on: http://localhost:5250
+2026-06-03 12:03:11.686 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 12:03:11.693 +05:30 [INF] Hosting environment: Development
+2026-06-03 12:03:11.695 +05:30 [INF] Content root path: C:\Users\hp\Desktop\CleanArchitecture\CleanArchDemo.API
+2026-06-03 12:03:12.359 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - null null
+2026-06-03 12:03:12.671 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - 200 null text/html;charset=utf-8 317.8774ms
+2026-06-03 12:03:12.703 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-03 12:03:12.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2026-06-03 12:03:12.727 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 23.8851ms
+2026-06-03 12:03:12.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.1819ms
+2026-06-03 12:03:12.917 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - null null
+2026-06-03 12:03:12.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.5199ms
+2026-06-03 12:03:31.484 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/register - null null
+2026-06-03 12:03:31.492 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:03:31.496 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/register - 204 null null 12.1752ms
+2026-06-03 12:03:31.498 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/register - application/json 56
+2026-06-03 12:03:31.506 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:03:31.521 +05:30 [INF] HTTP POST /api/auth/register request started
+2026-06-03 12:03:31.609 +05:30 [INF] Executing endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 12:03:31.631 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:03:31.842 +05:30 [INF] Registration requested for email a@call.com.
+2026-06-03 12:03:32.266 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-03 12:03:32.944 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-06-03 12:03:33.175 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [RefreshToken], [RefreshTokenExpiryTime], [Role])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-03 12:03:33.185 +05:30 [INF] User registered successfully with id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:03:33.192 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-06-03 12:03:33.197 +05:30 [INF] Executed action AuthController.Register (CleanArchDemo.API) in 1561.1314ms
+2026-06-03 12:03:33.200 +05:30 [INF] Executed endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 12:03:33.202 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 1681 ms
+2026-06-03 12:03:33.209 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/register - 200 null text/plain; charset=utf-8 1711.5676ms
+2026-06-03 12:03:45.636 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:03:45.639 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:03:45.641 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.9902ms
+2026-06-03 12:03:45.642 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:03:45.647 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:03:45.648 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:03:45.652 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:03:45.657 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:03:45.662 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:03:45.753 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:03:45.860 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:03:45.872 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:03:45.878 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:08:45.8631669+05:30".
+2026-06-03 12:03:45.881 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:03:45.882 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:03:45.885 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:03:45.888 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 228.3462ms
+2026-06-03 12:03:45.889 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:03:45.891 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 242 ms
+2026-06-03 12:03:45.893 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 250.8875ms
+2026-06-03 12:04:14.700 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:04:14.704 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:04:14.705 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.0305ms
+2026-06-03 12:04:14.706 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:04:14.712 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:04:14.713 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:04:14.716 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:04:14.717 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:04:14.722 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:04:14.737 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:04:14.813 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:04:14.818 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:04:14.821 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:09:14.8156941+05:30".
+2026-06-03 12:04:14.822 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:04:14.823 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:04:14.825 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:04:14.826 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 106.7026ms
+2026-06-03 12:04:14.829 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:04:14.830 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 117 ms
+2026-06-03 12:04:14.832 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 126.6566ms
+2026-06-03 12:04:57.737 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/register - null null
+2026-06-03 12:04:57.743 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:04:57.744 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/register - 204 null null 6.8887ms
+2026-06-03 12:04:57.746 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/register - application/json 55
+2026-06-03 12:04:57.753 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:04:57.756 +05:30 [INF] HTTP POST /api/auth/register request started
+2026-06-03 12:04:57.759 +05:30 [INF] Executing endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 12:04:57.761 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:04:57.766 +05:30 [INF] Registration requested for email u@call.com.
+2026-06-03 12:04:57.774 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-06-03 12:04:57.866 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [PasswordHash], [RefreshToken], [RefreshTokenExpiryTime], [Role])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-06-03 12:04:57.871 +05:30 [INF] User registered successfully with id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:04:57.872 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-06-03 12:04:57.873 +05:30 [INF] Executed action AuthController.Register (CleanArchDemo.API) in 108.3702ms
+2026-06-03 12:04:57.875 +05:30 [INF] Executed endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 12:04:57.877 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 120 ms
+2026-06-03 12:04:57.879 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/register - 200 null text/plain; charset=utf-8 133.0249ms
+2026-06-03 12:05:07.582 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:05:07.588 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:05:07.589 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.558ms
+2026-06-03 12:05:07.591 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:05:07.596 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:05:07.597 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:05:07.598 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:05:07.599 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:05:07.604 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:05:07.607 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:05:07.685 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:05:07.689 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:05:07.692 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:10:07.6875407+05:30".
+2026-06-03 12:05:07.693 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:05:07.695 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:05:07.696 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:05:07.697 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 93.3204ms
+2026-06-03 12:05:07.699 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:05:07.701 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 104 ms
+2026-06-03 12:05:07.703 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 113.0146ms
+2026-06-03 12:14:16.066 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:14:16.078 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:14:16.079 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 13.6979ms
+2026-06-03 12:14:16.082 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:14:16.089 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:14:16.090 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:14:16.092 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:14:16.093 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:14:16.097 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:14:16.114 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:14:16.196 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:14:16.201 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:14:16.205 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:19:16.1978131+05:30".
+2026-06-03 12:14:16.207 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:14:16.208 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:14:16.211 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:14:16.213 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 116.6142ms
+2026-06-03 12:14:16.214 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:14:16.215 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 125 ms
+2026-06-03 12:14:16.218 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 136.2505ms
+2026-06-03 12:14:38.536 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:14:38.540 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:14:38.541 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.3215ms
+2026-06-03 12:14:38.542 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:14:38.547 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:14:38.548 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:14:38.549 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:14:38.552 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:14:38.556 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:14:38.560 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:14:38.635 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:14:38.640 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:14:38.644 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:19:38.6376803+05:30".
+2026-06-03 12:14:38.646 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:14:38.647 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:14:38.648 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:14:38.651 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 95.5758ms
+2026-06-03 12:14:38.654 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:14:38.655 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 107 ms
+2026-06-03 12:14:38.657 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 115.2153ms
+2026-06-03 12:34:01.550 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:34:01.558 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:34:01.560 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.6825ms
+2026-06-03 12:34:01.567 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:34:01.574 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:34:01.575 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:34:01.577 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:34:01.579 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:34:01.583 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:34:01.607 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:34:01.682 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:34:01.688 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:34:01.691 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:39:01.6845015+05:30".
+2026-06-03 12:34:01.693 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:34:01.694 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:34:01.695 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:34:01.697 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 114.9247ms
+2026-06-03 12:34:01.700 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:34:01.701 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 126 ms
+2026-06-03 12:34:01.704 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 139.4764ms
+2026-06-03 12:36:01.279 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 12:36:01.287 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:01.289 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 9.9256ms
+2026-06-03 12:36:01.298 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:01.306 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:01.308 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:01.360 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:01.365 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:01.373 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:01.390 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:01.397 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:01.407 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 38.3161ms
+2026-06-03 12:36:01.409 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:01.412 +05:30 [INF] HTTP GET /api/users responded 200 in 103 ms
+2026-06-03 12:36:01.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 116.5483ms
+2026-06-03 12:36:06.237 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:06.243 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:06.245 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:06.248 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:06.250 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:06.255 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:06.260 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:06.263 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:06.265 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 10.6235ms
+2026-06-03 12:36:06.267 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:06.268 +05:30 [INF] HTTP GET /api/users responded 200 in 23 ms
+2026-06-03 12:36:06.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 34.7223ms
+2026-06-03 12:36:06.633 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 12:36:06.636 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:06.639 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 5.8462ms
+2026-06-03 12:36:06.641 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:06.647 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:06.648 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:06.650 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:06.651 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:06.655 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:06.659 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:06.663 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:06.664 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 10.6837ms
+2026-06-03 12:36:06.667 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:06.668 +05:30 [INF] HTTP GET /api/users responded 200 in 20 ms
+2026-06-03 12:36:06.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 29.9288ms
+2026-06-03 12:36:21.139 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 12:36:21.142 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:21.143 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 4.6367ms
+2026-06-03 12:36:21.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:21.150 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:21.152 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:21.155 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:21.157 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:21.159 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:21.163 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:21.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:21.168 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 9.2615ms
+2026-06-03 12:36:21.172 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:21.174 +05:30 [INF] HTTP GET /api/users responded 200 in 21 ms
+2026-06-03 12:36:21.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 31.5432ms
+2026-06-03 12:36:21.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:21.546 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:21.547 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:21.550 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:21.552 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:21.554 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:21.558 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:21.561 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:21.562 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 8.0436ms
+2026-06-03 12:36:21.564 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:21.565 +05:30 [INF] HTTP GET /api/users responded 200 in 17 ms
+2026-06-03 12:36:21.568 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 25.2383ms
+2026-06-03 12:36:29.749 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 12:36:29.756 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:29.757 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 8.0666ms
+2026-06-03 12:36:29.759 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:29.764 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:29.765 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:29.768 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:29.770 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:29.773 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:29.776 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:29.780 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:29.781 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 8.8092ms
+2026-06-03 12:36:29.784 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:29.785 +05:30 [INF] HTTP GET /api/users responded 200 in 20 ms
+2026-06-03 12:36:29.787 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 29.0299ms
+2026-06-03 12:36:30.185 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:36:30.190 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:36:30.191 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:36:30.193 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:30.194 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:36:30.197 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:36:30.200 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:36:30.205 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:36:30.207 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 10.0357ms
+2026-06-03 12:36:30.209 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:36:30.210 +05:30 [INF] HTTP GET /api/users responded 200 in 18 ms
+2026-06-03 12:36:30.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 26.8625ms
+2026-06-03 12:37:31.047 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 12:37:31.054 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:31.056 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 8.6607ms
+2026-06-03 12:37:31.060 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:37:31.068 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:31.068 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:37:31.071 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.073 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:37:31.076 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:37:31.082 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:37:31.085 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:37:31.088 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 12.9754ms
+2026-06-03 12:37:31.095 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.096 +05:30 [INF] HTTP GET /api/users responded 200 in 28 ms
+2026-06-03 12:37:31.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 38.1147ms
+2026-06-03 12:37:31.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:37:31.267 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:31.269 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:37:31.271 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.274 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:37:31.276 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:37:31.279 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:37:31.282 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:37:31.284 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 7.7639ms
+2026-06-03 12:37:31.286 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.289 +05:30 [INF] HTTP GET /api/users responded 200 in 20 ms
+2026-06-03 12:37:31.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 26.8996ms
+2026-06-03 12:37:31.520 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:37:31.525 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:31.528 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:37:31.532 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.533 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:37:31.535 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:37:31.539 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:37:31.544 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:37:31.546 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 11.3428ms
+2026-06-03 12:37:31.548 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:31.550 +05:30 [INF] HTTP GET /api/users responded 200 in 21 ms
+2026-06-03 12:37:31.552 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 32.4796ms
+2026-06-03 12:37:32.030 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 12:37:32.034 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:32.035 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 12:37:32.037 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:32.039 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 12:37:32.043 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 12:37:32.046 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 12:37:32.051 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 12:37:32.056 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 13.2612ms
+2026-06-03 12:37:32.061 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 12:37:32.065 +05:30 [INF] HTTP GET /api/users responded 200 in 30 ms
+2026-06-03 12:37:32.074 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 44.5696ms
+2026-06-03 12:37:59.502 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:37:59.510 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:59.511 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.2142ms
+2026-06-03 12:37:59.513 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:37:59.519 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:37:59.520 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:37:59.522 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:37:59.523 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:37:59.525 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:37:59.529 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:37:59.606 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:37:59.611 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:37:59.616 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:42:59.6082676+05:30".
+2026-06-03 12:37:59.617 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:37:59.618 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:37:59.620 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:37:59.622 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 96.9688ms
+2026-06-03 12:37:59.624 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:37:59.626 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 105 ms
+2026-06-03 12:37:59.628 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 115.4918ms
+2026-06-03 12:38:08.466 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:38:08.469 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:38:08.470 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.6428ms
+2026-06-03 12:38:08.472 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:38:08.478 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:38:08.480 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:38:08.482 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:38:08.483 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:38:08.486 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:38:08.489 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:38:08.568 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:08.583 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:38:08.587 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:43:08.5711835+05:30".
+2026-06-03 12:38:08.588 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:08.590 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:08.591 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:38:08.592 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 106.9157ms
+2026-06-03 12:38:08.594 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:38:08.596 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 116 ms
+2026-06-03 12:38:08.599 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 127.2818ms
+2026-06-03 12:38:55.182 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:38:55.191 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:38:55.192 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.7682ms
+2026-06-03 12:38:55.200 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:38:55.210 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:38:55.211 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:38:55.213 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:38:55.214 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:38:55.216 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:38:55.221 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:38:55.296 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:55.301 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:38:55.304 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:43:55.2987364+05:30".
+2026-06-03 12:38:55.306 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:55.307 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:38:55.308 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:38:55.309 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 93.7291ms
+2026-06-03 12:38:55.311 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:38:55.312 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 101 ms
+2026-06-03 12:38:55.314 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 114.8782ms
+2026-06-03 12:39:15.590 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:39:15.593 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:39:15.594 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.2517ms
+2026-06-03 12:39:15.595 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:39:15.600 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:39:15.601 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:39:15.603 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:39:15.605 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:39:15.608 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:39:15.623 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:39:15.714 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:39:15.721 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:39:15.725 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:44:15.7159764+05:30".
+2026-06-03 12:39:15.727 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:39:15.729 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:39:15.731 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:39:15.733 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 125.6877ms
+2026-06-03 12:39:15.735 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:39:15.736 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 135 ms
+2026-06-03 12:39:15.739 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 143.533ms
+2026-06-03 12:40:32.762 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:40:32.767 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:40:32.768 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.4218ms
+2026-06-03 12:40:32.769 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:40:32.774 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:40:32.775 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:40:32.777 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:40:32.779 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:40:32.781 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:40:32.786 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:40:32.861 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:40:32.868 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:40:32.872 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:45:32.8643557+05:30".
+2026-06-03 12:40:32.873 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:40:32.875 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:40:32.876 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:40:32.878 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 96.8902ms
+2026-06-03 12:40:32.880 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:40:32.881 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 105 ms
+2026-06-03 12:40:32.884 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 115.124ms
+2026-06-03 12:41:52.002 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:41:52.011 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:41:52.012 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.1972ms
+2026-06-03 12:41:52.017 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:41:52.025 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:41:52.026 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:41:52.027 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:41:52.029 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:41:52.032 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:41:52.038 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:41:52.112 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:41:52.119 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:41:52.124 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:46:52.1152753+05:30".
+2026-06-03 12:41:52.125 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:41:52.127 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:41:52.128 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:41:52.130 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 98.2755ms
+2026-06-03 12:41:52.132 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:41:52.134 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 107 ms
+2026-06-03 12:41:52.136 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 119.8021ms
+2026-06-03 12:42:01.009 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:42:01.014 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:42:01.015 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.9161ms
+2026-06-03 12:42:01.018 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:42:01.024 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:42:01.025 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:42:01.026 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:42:01.027 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:42:01.032 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:42:01.036 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:42:01.113 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:42:01.118 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:42:01.123 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:47:01.1166648+05:30".
+2026-06-03 12:42:01.126 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:42:01.128 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:42:01.129 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:42:01.132 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 100.7451ms
+2026-06-03 12:42:01.135 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:42:01.136 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 111 ms
+2026-06-03 12:42:01.140 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 122.4344ms
+2026-06-03 12:46:54.291 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:46:54.300 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:46:54.301 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.6674ms
+2026-06-03 12:46:54.305 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:46:54.314 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:46:54.315 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:46:54.317 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:46:54.319 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:46:54.324 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:46:54.350 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:46:54.427 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:46:54.433 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:46:54.438 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:51:54.4300240+05:30".
+2026-06-03 12:46:54.440 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:46:54.441 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:46:54.442 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:46:54.444 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 120.6272ms
+2026-06-03 12:46:54.447 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:46:54.450 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 134 ms
+2026-06-03 12:46:54.454 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 148.3174ms
+2026-06-03 12:47:24.221 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:47:24.229 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:47:24.230 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.3972ms
+2026-06-03 12:47:24.232 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:47:24.242 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:47:24.244 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:47:24.246 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:47:24.247 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:47:24.250 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:47:24.254 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:47:24.331 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:47:24.346 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:47:24.351 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:52:24.3338047+05:30".
+2026-06-03 12:47:24.352 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:47:24.354 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:47:24.355 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:47:24.356 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 106.8221ms
+2026-06-03 12:47:24.358 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:47:24.360 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 115 ms
+2026-06-03 12:47:24.362 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 130.6592ms
+2026-06-03 12:47:35.900 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:47:35.904 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:47:35.905 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.8126ms
+2026-06-03 12:47:35.906 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:47:35.912 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:47:35.913 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:47:35.915 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:47:35.916 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:47:35.919 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:47:35.922 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:47:35.999 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:47:36.003 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:47:36.007 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:52:36.0021914+05:30".
+2026-06-03 12:47:36.008 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:47:36.009 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:47:36.011 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:47:36.015 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 95.7978ms
+2026-06-03 12:47:36.017 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:47:36.018 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 105 ms
+2026-06-03 12:47:36.020 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 114.1214ms
+2026-06-03 12:48:53.570 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:48:53.581 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:48:53.583 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 13.3838ms
+2026-06-03 12:48:53.585 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:48:53.594 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:48:53.595 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:48:53.598 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:48:53.600 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:48:53.603 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:48:53.608 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:48:53.683 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:48:53.689 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:48:53.693 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:53:53.6855298+05:30".
+2026-06-03 12:48:53.695 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:48:53.696 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:48:53.699 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:48:53.701 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 98.5245ms
+2026-06-03 12:48:53.703 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:48:53.704 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 108 ms
+2026-06-03 12:48:53.706 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 120.891ms
+2026-06-03 12:49:08.117 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:49:08.121 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:49:08.122 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.2552ms
+2026-06-03 12:49:08.123 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 40
+2026-06-03 12:49:08.129 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:49:08.130 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:49:08.131 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:49:08.133 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:49:08.136 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:49:08.140 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:49:08.216 +05:30 [INF] Login failed due to invalid credentials for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:49:08.219 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 12:49:08.221 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 85.4524ms
+2026-06-03 12:49:08.223 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:49:08.225 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 95 ms
+2026-06-03 12:49:08.229 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 105.872ms
+2026-06-03 12:49:11.218 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:49:11.223 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:49:11.225 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:49:11.226 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:49:11.228 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:49:11.230 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:49:11.236 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:49:11.308 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:49:11.324 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:49:11.329 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T12:54:11.3102936+05:30".
+2026-06-03 12:49:11.331 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:49:11.333 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:49:11.335 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:49:11.337 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 106.7041ms
+2026-06-03 12:49:11.338 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:49:11.340 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 115 ms
+2026-06-03 12:49:11.342 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 123.76ms
+2026-06-03 12:51:57.436 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:51:57.445 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:51:57.446 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.7852ms
+2026-06-03 12:51:57.449 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 42
+2026-06-03 12:51:57.463 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:51:57.464 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:51:57.465 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:51:57.466 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:51:57.469 +05:30 [INF] Login requested for email a@admin.com.
+2026-06-03 12:51:57.473 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:51:57.477 +05:30 [INF] Login failed because user was not found for email a@admin.com.
+2026-06-03 12:51:57.478 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 12:51:57.479 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 10.685ms
+2026-06-03 12:51:57.481 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:51:57.482 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 18 ms
+2026-06-03 12:51:57.484 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 35.8844ms
+2026-06-03 12:52:03.809 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:52:03.813 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:52:03.814 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.4151ms
+2026-06-03 12:52:03.816 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 42
+2026-06-03 12:52:03.821 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:52:03.822 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:52:03.823 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:52:03.824 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:52:03.829 +05:30 [INF] Login requested for email s@admin.com.
+2026-06-03 12:52:03.832 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:52:03.835 +05:30 [INF] Login failed because user was not found for email s@admin.com.
+2026-06-03 12:52:03.836 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 12:52:03.837 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 8.8239ms
+2026-06-03 12:52:03.839 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:52:03.840 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 18 ms
+2026-06-03 12:52:03.845 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 28.9108ms
+2026-06-03 12:52:18.395 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:52:18.399 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:52:18.401 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.0152ms
+2026-06-03 12:52:18.402 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:52:18.410 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:52:18.413 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:52:18.415 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:52:18.416 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:52:18.419 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:52:18.422 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:52:18.496 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:52:18.502 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:52:18.506 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T12:57:18.4993396+05:30".
+2026-06-03 12:52:18.507 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:52:18.508 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:52:18.510 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:52:18.511 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 92.5743ms
+2026-06-03 12:52:18.513 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:52:18.514 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 100 ms
+2026-06-03 12:52:18.516 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 114.0901ms
+2026-06-03 12:57:41.744 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:57:41.752 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:57:41.754 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.233ms
+2026-06-03 12:57:41.762 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:57:41.768 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:57:41.769 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:57:41.771 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:57:41.772 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:57:41.775 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 12:57:41.788 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:57:41.861 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:57:41.878 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:57:41.882 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T13:02:41.8636487+05:30".
+2026-06-03 12:57:41.884 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:57:41.885 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 12:57:41.886 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:57:41.888 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 113.4728ms
+2026-06-03 12:57:41.891 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:57:41.892 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 123 ms
+2026-06-03 12:57:41.894 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 135.0187ms
+2026-06-03 12:58:12.013 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 12:58:12.023 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:58:12.024 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 11.728ms
+2026-06-03 12:58:12.026 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 12:58:12.033 +05:30 [INF] CORS policy execution successful.
+2026-06-03 12:58:12.034 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 12:58:12.035 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:58:12.037 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 12:58:12.039 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 12:58:12.044 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 12:58:12.135 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:58:12.140 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 12:58:12.144 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T13:03:12.1370374+05:30".
+2026-06-03 12:58:12.145 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:58:12.147 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 12:58:12.148 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 12:58:12.149 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 110.1285ms
+2026-06-03 12:58:12.152 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 12:58:12.153 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 118 ms
+2026-06-03 12:58:12.155 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 129.0158ms
+2026-06-03 13:01:15.006 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 13:01:15.020 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:01:15.021 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 15.8778ms
+2026-06-03 13:01:15.023 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 13:01:15.029 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:01:15.031 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 13:01:15.032 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:01:15.034 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 13:01:15.036 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 13:01:15.041 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 13:01:15.115 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 13:01:15.131 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 13:01:15.134 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T13:06:15.1174257+05:30".
+2026-06-03 13:01:15.136 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 13:01:15.137 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 13:01:15.139 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 13:01:15.140 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 104.1141ms
+2026-06-03 13:01:15.145 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:01:15.149 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 118 ms
+2026-06-03 13:01:15.151 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 128.2141ms
+2026-06-03 13:01:35.197 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 13:01:35.203 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:01:35.205 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 8.5473ms
+2026-06-03 13:01:35.209 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 40
+2026-06-03 13:01:35.218 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:01:35.219 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 13:01:35.220 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:01:35.221 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 13:01:35.224 +05:30 [INF] Login requested for email u@call.om.
+2026-06-03 13:01:35.228 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 13:01:35.231 +05:30 [INF] Login failed because user was not found for email u@call.om.
+2026-06-03 13:01:35.232 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 13:01:35.234 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 9.978ms
+2026-06-03 13:01:35.240 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:01:35.242 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 22 ms
+2026-06-03 13:01:35.244 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 34.6144ms
+2026-06-03 13:02:16.074 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 13:02:16.078 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:02:16.079 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.6941ms
+2026-06-03 13:02:16.081 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 40
+2026-06-03 13:02:16.086 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:02:16.087 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 13:02:16.089 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:02:16.092 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 13:02:16.094 +05:30 [INF] Login requested for email u@call.om.
+2026-06-03 13:02:16.096 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 13:02:16.100 +05:30 [INF] Login failed because user was not found for email u@call.om.
+2026-06-03 13:02:16.101 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 13:02:16.103 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 9.2661ms
+2026-06-03 13:02:16.109 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:02:16.112 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 24 ms
+2026-06-03 13:02:16.113 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 32.861ms
+2026-06-03 13:02:29.773 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 13:02:29.776 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:02:29.777 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.6438ms
+2026-06-03 13:02:29.779 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 13:02:29.786 +05:30 [INF] CORS policy execution successful.
+2026-06-03 13:02:29.787 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 13:02:29.789 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:02:29.790 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 13:02:29.793 +05:30 [INF] Login requested for email u@call.com.
+2026-06-03 13:02:29.797 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 13:02:29.875 +05:30 [INF] Access token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 13:02:29.880 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 13:02:29.884 +05:30 [INF] Refresh token saved for user id "490e19af-2be5-4168-af73-2798e35e4cd4" with expiry "2026-06-03T13:07:29.8775461+05:30".
+2026-06-03 13:02:29.886 +05:30 [INF] Refresh token created for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 13:02:29.887 +05:30 [INF] Login completed successfully for user id "490e19af-2be5-4168-af73-2798e35e4cd4".
+2026-06-03 13:02:29.888 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 13:02:29.889 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 96.984ms
+2026-06-03 13:02:29.891 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 13:02:29.892 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 105 ms
+2026-06-03 13:02:29.894 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 115.4773ms
+2026-06-03 14:02:01.895 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:02:01.903 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:01.904 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 9.3928ms
+2026-06-03 14:02:01.906 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 42
+2026-06-03 14:02:01.913 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:01.914 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:02:01.916 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:01.918 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:02:01.921 +05:30 [INF] Login requested for email a@gmail.com.
+2026-06-03 14:02:01.933 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:02:01.936 +05:30 [INF] Login failed because user was not found for email a@gmail.com.
+2026-06-03 14:02:01.938 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 14:02:01.940 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 19.7484ms
+2026-06-03 14:02:01.942 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:01.943 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 29 ms
+2026-06-03 14:02:01.946 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 39.9865ms
+2026-06-03 14:02:09.831 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:02:09.834 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:09.835 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 4.5492ms
+2026-06-03 14:02:09.837 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 42
+2026-06-03 14:02:09.843 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:09.844 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:02:09.845 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:09.847 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:02:09.849 +05:30 [INF] Login requested for email a@gmail.com.
+2026-06-03 14:02:09.853 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:02:09.857 +05:30 [INF] Login failed because user was not found for email a@gmail.com.
+2026-06-03 14:02:09.858 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 14:02:09.860 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 11.088ms
+2026-06-03 14:02:09.862 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:09.863 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 19 ms
+2026-06-03 14:02:09.865 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 28.3319ms
+2026-06-03 14:02:28.676 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:02:28.681 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:28.683 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.9795ms
+2026-06-03 14:02:28.685 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 14:02:28.690 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:02:28.691 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:02:28.694 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:28.696 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:02:28.699 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 14:02:28.704 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:02:28.778 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:02:28.794 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 14:02:28.798 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T14:07:28.7804755+05:30".
+2026-06-03 14:02:28.799 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:02:28.800 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:02:28.801 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 14:02:28.803 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 103.7091ms
+2026-06-03 14:02:28.805 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:02:28.806 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 114 ms
+2026-06-03 14:02:28.808 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 123.1611ms
+2026-06-03 14:10:04.530 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/register - null null
+2026-06-03 14:10:04.538 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:10:04.539 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/register - 204 null null 9.4525ms
+2026-06-03 14:10:04.541 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/register - application/json 60
+2026-06-03 14:10:04.549 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:10:04.551 +05:30 [INF] HTTP POST /api/auth/register request started
+2026-06-03 14:10:04.553 +05:30 [INF] Executing endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 14:10:04.554 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Register(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:10:04.560 +05:30 [INF] Registration requested for email a@call.com.
+2026-06-03 14:10:04.586 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-06-03 14:10:04.592 +05:30 [INF] Registration failed because user already exists for email a@call.com.
+2026-06-03 14:10:04.594 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 14:10:04.597 +05:30 [INF] Executed action AuthController.Register (CleanArchDemo.API) in 37.1956ms
+2026-06-03 14:10:04.599 +05:30 [INF] Executed endpoint 'AuthController.Register (CleanArchDemo.API)'
+2026-06-03 14:10:04.600 +05:30 [INF] HTTP POST /api/auth/register responded 400 in 49 ms
+2026-06-03 14:10:04.602 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/register - 400 null text/plain; charset=utf-8 61.6629ms
+2026-06-03 14:10:24.690 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:10:24.699 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:10:24.701 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 10.8418ms
+2026-06-03 14:10:24.702 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 14:10:24.711 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:10:24.713 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:10:24.715 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:10:24.717 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:10:24.723 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 14:10:24.727 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:10:24.805 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:10:24.823 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 14:10:24.828 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T14:15:24.8079698+05:30".
+2026-06-03 14:10:24.830 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:10:24.832 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:10:24.833 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 14:10:24.835 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 112.2427ms
+2026-06-03 14:10:24.841 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:10:24.843 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 129 ms
+2026-06-03 14:10:24.846 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 143.5665ms
+2026-06-03 14:19:49.224 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:19:49.234 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:19:49.235 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 11.1336ms
+2026-06-03 14:19:49.245 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 14:19:49.259 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:19:49.261 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:19:49.264 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:19:49.266 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:19:49.269 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 14:19:49.303 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:19:49.383 +05:30 [INF] Login failed due to invalid credentials for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:19:49.386 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 14:19:49.388 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 119.2827ms
+2026-06-03 14:19:49.390 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:19:49.391 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 130 ms
+2026-06-03 14:19:49.393 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 148.8308ms
+2026-06-03 14:19:56.782 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 14:19:56.785 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:19:56.787 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 5.2271ms
+2026-06-03 14:19:56.789 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 14:19:56.794 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:19:56.795 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 14:19:56.797 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:19:56.798 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:19:56.801 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 14:19:56.809 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 14:19:56.888 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:19:56.907 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 14:19:56.913 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T14:24:56.8913017+05:30".
+2026-06-03 14:19:56.914 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:19:56.916 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:19:56.918 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 14:19:56.922 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 120.8757ms
+2026-06-03 14:19:56.925 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 14:19:56.926 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 130 ms
+2026-06-03 14:19:56.929 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 140.4631ms
+2026-06-03 14:31:17.653 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 14:31:17.656 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:17.658 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 5.4817ms
+2026-06-03 14:31:17.660 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:31:17.668 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:17.669 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:31:17.676 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 08:54:56', Current time (UTC): '03-06-2026 09:01:17'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-03 14:31:17.703 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 08:54:56', Current time (UTC): '03-06-2026 09:01:17'.
+2026-06-03 14:31:17.706 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-06-03 14:31:17.712 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-03 14:31:17.716 +05:30 [INF] HTTP GET /api/users responded 401 in 46 ms
+2026-06-03 14:31:17.718 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 401 0 null 58.3353ms
+2026-06-03 14:31:17.721 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/refresh-token - null null
+2026-06-03 14:31:17.726 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:17.727 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/refresh-token - 204 null null 6.5588ms
+2026-06-03 14:31:17.729 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/refresh-token - application/json 111
+2026-06-03 14:31:17.737 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:17.738 +05:30 [INF] HTTP POST /api/auth/refresh-token request started
+2026-06-03 14:31:17.741 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 08:54:56', Current time (UTC): '03-06-2026 09:01:17'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-03 14:31:17.748 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 08:54:56', Current time (UTC): '03-06-2026 09:01:17'.
+2026-06-03 14:31:17.752 +05:30 [INF] Executing endpoint 'AuthController.Refresh (CleanArchDemo.API)'
+2026-06-03 14:31:17.759 +05:30 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Refresh(CleanArchDemo.Application.DTOs.RefreshTokenRequestDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:31:17.769 +05:30 [INF] Refresh token requested for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:31:17.837 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__get_Item_0
+2026-06-03 14:31:17.842 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:31:17.846 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 14:31:17.850 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T14:36:17.8431260+05:30".
+2026-06-03 14:31:17.852 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:31:17.854 +05:30 [INF] Refresh token completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:31:17.855 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 14:31:17.857 +05:30 [INF] Executed action AuthController.Refresh (CleanArchDemo.API) in 94.797ms
+2026-06-03 14:31:17.859 +05:30 [INF] Executed endpoint 'AuthController.Refresh (CleanArchDemo.API)'
+2026-06-03 14:31:17.860 +05:30 [INF] HTTP POST /api/auth/refresh-token responded 200 in 121 ms
+2026-06-03 14:31:17.862 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/refresh-token - 200 null application/json; charset=utf-8 133.6554ms
+2026-06-03 14:31:17.865 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:31:17.874 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:17.875 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:31:17.877 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:31:17.879 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 14:31:17.885 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 14:31:17.887 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 14:31:17.891 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 14:31:17.892 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 8.0795ms
+2026-06-03 14:31:17.894 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:31:17.897 +05:30 [INF] HTTP GET /api/users responded 200 in 21 ms
+2026-06-03 14:31:17.901 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 35.2939ms
+2026-06-03 14:31:29.122 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 14:31:29.129 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:29.132 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 10.5207ms
+2026-06-03 14:31:29.135 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:31:29.143 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:31:29.144 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:31:29.149 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:31:29.151 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 14:31:29.155 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 14:31:29.158 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 14:31:29.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 14:31:29.169 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 13.3681ms
+2026-06-03 14:31:29.172 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:31:29.173 +05:30 [INF] HTTP GET /api/users responded 200 in 29 ms
+2026-06-03 14:31:29.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 40.8656ms
+2026-06-03 14:32:07.943 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 14:32:07.951 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:32:07.953 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 10.2892ms
+2026-06-03 14:32:07.960 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:32:07.968 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:32:07.969 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:32:07.974 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:32:07.975 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 14:32:07.979 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 14:32:07.983 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 14:32:07.989 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 14:32:07.992 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 12.9894ms
+2026-06-03 14:32:07.999 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:32:08.000 +05:30 [INF] HTTP GET /api/users responded 200 in 31 ms
+2026-06-03 14:32:08.005 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 45.5311ms
+2026-06-03 14:56:51.262 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/users - null null
+2026-06-03 14:56:51.272 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.275 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/users - 204 null null 13.2298ms
+2026-06-03 14:56:51.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:56:51.290 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.291 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:56:51.295 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 09:06:17', Current time (UTC): '03-06-2026 09:26:51'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-03 14:56:51.301 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 09:06:17', Current time (UTC): '03-06-2026 09:26:51'.
+2026-06-03 14:56:51.306 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-06-03 14:56:51.309 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-06-03 14:56:51.310 +05:30 [INF] HTTP GET /api/users responded 401 in 18 ms
+2026-06-03 14:56:51.312 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 401 0 null 33.0466ms
+2026-06-03 14:56:51.318 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/refresh-token - null null
+2026-06-03 14:56:51.324 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.326 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/refresh-token - 204 null null 9.1201ms
+2026-06-03 14:56:51.327 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/refresh-token - application/json 111
+2026-06-03 14:56:51.334 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.339 +05:30 [INF] HTTP POST /api/auth/refresh-token request started
+2026-06-03 14:56:51.344 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 09:06:17', Current time (UTC): '03-06-2026 09:26:51'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-03 14:56:51.359 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '03-06-2026 09:06:17', Current time (UTC): '03-06-2026 09:26:51'.
+2026-06-03 14:56:51.360 +05:30 [INF] Executing endpoint 'AuthController.Refresh (CleanArchDemo.API)'
+2026-06-03 14:56:51.362 +05:30 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Refresh(CleanArchDemo.Application.DTOs.RefreshTokenRequestDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 14:56:51.365 +05:30 [INF] Refresh token requested for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:56:51.382 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__get_Item_0
+2026-06-03 14:56:51.388 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:56:51.393 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 14:56:51.397 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T15:01:51.3897761+05:30".
+2026-06-03 14:56:51.399 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:56:51.403 +05:30 [INF] Refresh token completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 14:56:51.405 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 14:56:51.407 +05:30 [INF] Executed action AuthController.Refresh (CleanArchDemo.API) in 41.7781ms
+2026-06-03 14:56:51.409 +05:30 [INF] Executed endpoint 'AuthController.Refresh (CleanArchDemo.API)'
+2026-06-03 14:56:51.410 +05:30 [INF] HTTP POST /api/auth/refresh-token responded 200 in 71 ms
+2026-06-03 14:56:51.413 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/refresh-token - 200 null application/json; charset=utf-8 85.2058ms
+2026-06-03 14:56:51.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:56:51.424 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.425 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:56:51.427 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:56:51.428 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 14:56:51.431 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 14:56:51.434 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 14:56:51.441 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 14:56:51.443 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 12.5053ms
+2026-06-03 14:56:51.446 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:56:51.447 +05:30 [INF] HTTP GET /api/users responded 200 in 22 ms
+2026-06-03 14:56:51.450 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 33.8845ms
+2026-06-03 14:56:51.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7265/api/users - null null
+2026-06-03 14:56:51.972 +05:30 [INF] CORS policy execution successful.
+2026-06-03 14:56:51.974 +05:30 [INF] HTTP GET /api/users request started
+2026-06-03 14:56:51.978 +05:30 [INF] Executing endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:56:51.981 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CleanArchDemo.API.Controllers.UsersController (CleanArchDemo.API).
+2026-06-03 14:56:51.987 +05:30 [INF] Handling GetUsersQuery.
+2026-06-03 14:56:51.992 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+2026-06-03 14:56:51.998 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArchDemo.Application.DTOs.UserResponseDto, CleanArchDemo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-03 14:56:52.005 +05:30 [INF] Executed action CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API) in 18.2691ms
+2026-06-03 14:56:52.009 +05:30 [INF] Executed endpoint 'CleanArchDemo.API.Controllers.UsersController.GetAll (CleanArchDemo.API)'
+2026-06-03 14:56:52.011 +05:30 [INF] HTTP GET /api/users responded 200 in 36 ms
+2026-06-03 14:56:52.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7265/api/users - 200 null application/json; charset=utf-8 46.5248ms
+2026-06-03 18:05:50.933 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7265/api/auth/login - null null
+2026-06-03 18:05:50.938 +05:30 [INF] CORS policy execution successful.
+2026-06-03 18:05:50.939 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7265/api/auth/login - 204 null null 6.2625ms
+2026-06-03 18:05:50.942 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 18:05:50.949 +05:30 [INF] CORS policy execution successful.
+2026-06-03 18:05:50.951 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 18:05:50.953 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 18:05:50.954 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 18:05:50.958 +05:30 [INF] Login requested for email s@call.com.
+2026-06-03 18:05:50.988 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 18:05:50.992 +05:30 [INF] Login failed because user was not found for email s@call.com.
+2026-06-03 18:05:50.993 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-03 18:05:50.996 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 39.1123ms
+2026-06-03 18:05:50.998 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 18:05:51.000 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 49 ms
+2026-06-03 18:05:51.003 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 400 null text/plain; charset=utf-8 61.5699ms
+2026-06-03 18:05:55.488 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7265/api/auth/login - application/json 41
+2026-06-03 18:05:55.492 +05:30 [INF] CORS policy execution successful.
+2026-06-03 18:05:55.494 +05:30 [INF] HTTP POST /api/auth/login request started
+2026-06-03 18:05:55.497 +05:30 [INF] Executing endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 18:05:55.499 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CleanArchDemo.Application.DTOs.TokenResponseDto]] Login(CleanArchDemo.Application.DTOs.UserDto) on controller AuthController (CleanArchDemo.API).
+2026-06-03 18:05:55.502 +05:30 [INF] Login requested for email a@call.com.
+2026-06-03 18:05:55.505 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2026-06-03 18:05:55.584 +05:30 [INF] Access token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 18:05:55.591 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p5='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [PasswordHash] = @p1, [RefreshToken] = @p2, [RefreshTokenExpiryTime] = @p3, [Role] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+2026-06-03 18:05:55.597 +05:30 [INF] Refresh token saved for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f" with expiry "2026-06-03T18:10:55.5869318+05:30".
+2026-06-03 18:05:55.599 +05:30 [INF] Refresh token created for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 18:05:55.600 +05:30 [INF] Login completed successfully for user id "18c6027c-cb58-4dbe-ab55-f3f712e2ef7f".
+2026-06-03 18:05:55.602 +05:30 [INF] Executing OkObjectResult, writing value of type 'CleanArchDemo.Application.DTOs.TokenResponseDto'.
+2026-06-03 18:05:55.604 +05:30 [INF] Executed action AuthController.Login (CleanArchDemo.API) in 102.0728ms
+2026-06-03 18:05:55.606 +05:30 [INF] Executed endpoint 'AuthController.Login (CleanArchDemo.API)'
+2026-06-03 18:05:55.607 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 112 ms
+2026-06-03 18:05:55.611 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7265/api/auth/login - 200 null application/json; charset=utf-8 123.1962ms
