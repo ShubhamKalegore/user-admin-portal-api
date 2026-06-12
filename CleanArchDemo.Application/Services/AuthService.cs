@@ -70,6 +70,7 @@ public class AuthService : IAuthService
         }
 
         var tokenResponse = await CreateTokenResponse(user);
+
         _logger.LogInformation("Login completed successfully for user id {UserId}.", user.Id);
 
         return tokenResponse;
@@ -104,7 +105,8 @@ public class AuthService : IAuthService
         return new TokenResponseDto
         {
             AccessToken = accessToken,
-            RefreshToken = refreshToken
+            RefreshToken = refreshToken,
+            UserId = user.Id
         };
     }
 

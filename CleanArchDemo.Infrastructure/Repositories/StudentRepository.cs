@@ -13,17 +13,17 @@ namespace CleanArchDemo.Infrastructure.Repositories;
 public class StudentRepository : IStudentRepository
 {
     private readonly AppDbContext _context;
-    public StudentRepository(AppDbContext context) 
+    public StudentRepository(AppDbContext context)
     {
         _context = context;
     }
 
-    public async Task<List<Student>> GetAllStudents ()
+    public async Task<List<Student>> GetAllStudents()
     {
         return await _context.Students.ToListAsync();
     }
 
-    public async Task<Student?> GetStudentById (int id)
+    public async Task<Student?> GetStudentById(int id)
     {
         return await _context.Students.Where(s => s.Id == id).FirstOrDefaultAsync();
     }
