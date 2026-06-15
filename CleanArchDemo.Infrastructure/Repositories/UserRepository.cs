@@ -28,6 +28,12 @@ public class UserRepository : IUserRepository
     public async Task<User?> GetByIdAsync(Guid id) =>
         await _context.Users.FindAsync(id);
 
+    public async Task<User?> GetByRefreshTokenAsync(string refreshToken)
+    {
+        return await _context.Users
+            .FirstOrDefaultAsync(
+                x => x.RefreshToken == refreshToken);
+    }
     public async Task AddAsync(User user)
     {
         await _context.Users.AddAsync(user);

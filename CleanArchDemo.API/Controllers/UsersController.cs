@@ -12,7 +12,7 @@ namespace CleanArchDemo.API.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 //[Authorize(Roles = "Admin")]
-[Authorize]
+//[Authorize]
 public class UsersController : ControllerBase
 {
     private readonly ISender _sender;

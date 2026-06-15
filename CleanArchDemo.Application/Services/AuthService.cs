@@ -76,24 +76,38 @@ public class AuthService : IAuthService
         return tokenResponse;
     }
 
-    public async Task<TokenResponseDto?> RefreshTokensAsync(RefreshTokenRequestDto request)
+    //public async Task<TokenResponseDto?> RefreshTokensAsync(RefreshTokenRequestDto request)
+    //{
+    //    _logger.LogInformation("Refresh token requested for user id {UserId}.", request.UserId);
+
+    //    var user = await _userRepository.GetByIdAsync(request.UserId);
+
+    //    if (user is null || user.RefreshToken != request.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+    //    {
+    //        _logger.LogInformation("Refresh token failed for user id {UserId}.", request.UserId);
+    //        return null;
+    //    }
+
+    //    var tokenResponse = await CreateTokenResponse(user);
+    //    _logger.LogInformation("Refresh token completed successfully for user id {UserId}.", user.Id);
+
+    //    return tokenResponse;
+    //}
+
+    public async Task<TokenResponseDto?> RefreshTokensAsync(string refreshToken)
     {
-        _logger.LogInformation("Refresh token requested for user id {UserId}.", request.UserId);
+        var user =
+            await _userRepository
+                .GetByRefreshTokenAsync(refreshToken);
 
-        var user = await _userRepository.GetByIdAsync(request.UserId);
-
-        if (user is null || user.RefreshToken != request.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-        {
-            _logger.LogInformation("Refresh token failed for user id {UserId}.", request.UserId);
+        if (user is null)
             return null;
-        }
 
-        var tokenResponse = await CreateTokenResponse(user);
-        _logger.LogInformation("Refresh token completed successfully for user id {UserId}.", user.Id);
+        if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            return null;
 
-        return tokenResponse;
+        return await CreateTokenResponse(user);
     }
-
     private async Task<TokenResponseDto> CreateTokenResponse(User user)
     {
         var accessToken = CreateToken(user);
@@ -149,5 +163,18 @@ public class AuthService : IAuthService
             user.RefreshTokenExpiryTime);
 
         return refreshToken;
+    }
+
+    public async Task LogoutAsync(Guid userId)
+    {
+        var user = await _userRepository.GetByIdAsync(userId);
+
+        if (user is null)
+            return;
+
+        user.RefreshToken = string.Empty;
+        user.RefreshTokenExpiryTime = DateTime.UtcNow;
+
+        await _userRepository.UpdateAsync(user);
     }
 }
