@@ -175,4 +175,3 @@ Database access occurs only on a cache miss.
 * Reduced failed requests at 300 concurrent users from 99 failures to 56 failures.
 * Improved API scalability and reduced database pressure.
 
-This exercise demonstrates practical performance testing, bottleneck analysis, and optimization techniques in ASP.NET Core using MediatR, CQRS, EF Core, and IMemoryCache.
